@@ -1,0 +1,28 @@
+{
+  "name": "wakkos-world",
+  "version": "1.0.0",
+  "description": "The world according to the mind of Wakko Warner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mackignacio/wakkos-world.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mackignacio/wakkos-world/issues"
+  },
+  "homepage": "https://github.com/mackignacio/wakkos-world#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@slack/bolt": "^3.13.0",
+    "dotenv": "^16.0.3"
+  }
+}
