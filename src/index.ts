@@ -20,6 +20,7 @@ const app = new App({
 app.action(ACTIONS.COUNTRY, actions.country);
 app.action(ACTIONS.CAPITAL, actions.capital);
 app.action(ACTIONS.CONTINENT, actions.continent);
+app.action(ACTIONS.INFO, actions.info);
 
 // Listen to Slack Messages
 app.message("", initial);
