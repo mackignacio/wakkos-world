@@ -17,7 +17,7 @@ export const initial = async ({ message, say }: any) => {
         type: "input",
         element: {
           type: "plain_text_input",
-          action_id: "country_name",
+          action_id: ACTIONS.COUNTRY,
           placeholder: {
             type: "plain_text",
             text: "Enter country name",
@@ -25,7 +25,7 @@ export const initial = async ({ message, say }: any) => {
         },
         label: {
           type: "plain_text",
-          text: "Do you want to know a country?",
+          text: "What is the country of?",
           emoji: true,
         },
       },
@@ -51,15 +51,15 @@ export const initial = async ({ message, say }: any) => {
         type: "input",
         element: {
           type: "plain_text_input",
-          action_id: "country_name",
+          action_id: ACTIONS.CAPITAL,
           placeholder: {
             type: "plain_text",
-            text: "Enter country name",
+            text: "Enter country's capital",
           },
         },
         label: {
           type: "plain_text",
-          text: "Do want to know the capital of a country?",
+          text: "What country has the capital of?",
           emoji: true,
         },
       },
@@ -85,15 +85,15 @@ export const initial = async ({ message, say }: any) => {
         type: "input",
         element: {
           type: "plain_text_input",
-          action_id: "continent",
+          action_id: ACTIONS.CONTINENT,
           placeholder: {
             type: "plain_text",
-            text: "Enter country name",
+            text: "Enter continent name",
           },
         },
         label: {
           type: "plain_text",
-          text: "Do want to know the continent of a country?",
+          text: "What are the countries in the continent of?",
           emoji: true,
         },
       },
