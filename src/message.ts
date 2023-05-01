@@ -1,4 +1,5 @@
 import { ACTIONS } from "./constants";
+import { question } from "./blocks";
 
 export const initial = async ({ message, say }: any) => {
   await say({
@@ -13,105 +14,30 @@ export const initial = async ({ message, say }: any) => {
       {
         type: "divider",
       },
-      {
-        type: "input",
-        element: {
-          type: "plain_text_input",
-          action_id: ACTIONS.COUNTRY,
-          placeholder: {
-            type: "plain_text",
-            text: "Enter country name",
-          },
-        },
-        label: {
-          type: "plain_text",
-          text: "What is the country of?",
-          emoji: true,
-        },
-      },
-      {
-        type: "actions",
-        elements: [
-          {
-            type: "button",
-            text: {
-              type: "plain_text",
-              text: "Ask me",
-              emoji: true,
-            },
-            value: ACTIONS.COUNTRY,
-            action_id: ACTIONS.COUNTRY,
-          },
-        ],
-      },
+      question.input(
+        ACTIONS.COUNTRY,
+        "Enter country name",
+        "What is the country of?"
+      ),
+      question.actions(ACTIONS.COUNTRY, "Ask me"),
       {
         type: "divider",
       },
-      {
-        type: "input",
-        element: {
-          type: "plain_text_input",
-          action_id: ACTIONS.CAPITAL,
-          placeholder: {
-            type: "plain_text",
-            text: "Enter country's capital",
-          },
-        },
-        label: {
-          type: "plain_text",
-          text: "What country has the capital of?",
-          emoji: true,
-        },
-      },
-      {
-        type: "actions",
-        elements: [
-          {
-            type: "button",
-            text: {
-              type: "plain_text",
-              text: "Ask me",
-              emoji: true,
-            },
-            value: ACTIONS.CAPITAL,
-            action_id: ACTIONS.CAPITAL,
-          },
-        ],
-      },
+      question.input(
+        ACTIONS.CAPITAL,
+        "Enter country's capital",
+        "What country has the capital of?"
+      ),
+      question.actions(ACTIONS.CAPITAL, "Ask me"),
       {
         type: "divider",
       },
-      {
-        type: "input",
-        element: {
-          type: "plain_text_input",
-          action_id: ACTIONS.CONTINENT,
-          placeholder: {
-            type: "plain_text",
-            text: "Enter continent name",
-          },
-        },
-        label: {
-          type: "plain_text",
-          text: "What are the countries in the continent of?",
-          emoji: true,
-        },
-      },
-      {
-        type: "actions",
-        elements: [
-          {
-            type: "button",
-            text: {
-              type: "plain_text",
-              text: "Ask me",
-              emoji: true,
-            },
-            value: ACTIONS.CONTINENT,
-            action_id: ACTIONS.CONTINENT,
-          },
-        ],
-      },
+      question.input(
+        ACTIONS.CONTINENT,
+        "Enter continent name",
+        "What are the countries in the continent of?"
+      ),
+      question.actions(ACTIONS.CONTINENT, "Ask me"),
     ],
   });
 };

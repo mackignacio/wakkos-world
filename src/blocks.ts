@@ -23,4 +23,42 @@ const country = (country: ICountry) => {
   };
 };
 
-export { country };
+const question = {
+  input: (actionId: string, text: string, label: string) => {
+    return {
+      type: "input",
+      element: {
+        type: "plain_text_input",
+        action_id: actionId,
+        placeholder: {
+          type: "plain_text",
+          text,
+        },
+      },
+      label: {
+        type: "plain_text",
+        text: label,
+        emoji: true,
+      },
+    };
+  },
+  actions: (action: string, text: string) => {
+    return {
+      type: "actions",
+      elements: [
+        {
+          type: "button",
+          text: {
+            type: "plain_text",
+            text: text,
+            emoji: true,
+          },
+          value: action,
+          action_id: action,
+        },
+      ],
+    };
+  },
+};
+
+export { country, question };
